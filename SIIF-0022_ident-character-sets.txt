@@ -1,0 +1,70 @@
+*	*	*	*	*	*	*	*	*	+
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A22902	1
+SIIF 22		Identifier Character Sets	HEJEJN Nia	of 2
+*	*	*	*	*	*	*	*	*	+
+
+"""
+This document denotes the Identifier Character Sets 
+for Document and Object Identifiers.
+"""
+
+1. Character Sets
+
+  1a. Set A - Physical Character Set
+    
+    [A-Z0-9-._]
+    
+    This set is for identifiers intended to be printed.
+    This set is NOT CASE-SENSITIVE.
+    
+    The first character SHALL be of [A-Z] or [_] (UNDERSCORE).
+      
+    When printed, this set SHALL be printed in UPPERCASE letters.
+    
+    When printed as Code 39, the [ ] (SPACE, 38) character
+    SHALL be translated as [_] (UNDERSCORE) when read.
+  
+  
+  1b. Set B - Digital Character Set
+    
+    [A-Za-z0-9-._]
+    
+    This set is for identifiers intended solely for digital use.
+    This set is a CASE-SENSITIVE superset of Set A.
+    
+    The first character SHALL be of [A-Za-z] or [_] (UNDERSCORE).
+    
+    When printed, this set SHALL be printed in their original case.
+    When printed, You MAY prefix the identifier with [++] (PLUS PLUS)
+    to indicate the use of Set B.
+    
+    When printed as Code 39, lowercase characters 
+    SHALL be prefixed with [+] (PLUS, 42).
+
+
+<div style="line-break: page" />
+*	*	*	*	*	*	*	*	*	+
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A22902	2
+SIIF 22		Identifier Character Sets	HEJEJN Nia	of 2
+*	*	*	*	*	*	*	*	*	+
+
+2. Reference Character Sets
+
+  2a. POSIX Portable Filename Character Set
+      (IEEE Std 1003.1-2017, 3.282)
+  
+      [A-Za-z0-9-._]
+      First Character SHALL NOT be [-] (HYPHEN)
+ 
+  
+  2b. URL Unreserved Characters
+      (RFC 3986, 2.3)
+      
+      [-._~]
+  
+  
+  2c. Code 39 Character Set
+      
+      [A-Z0-9-$/+% ]
+
+...

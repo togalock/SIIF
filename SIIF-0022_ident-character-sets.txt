@@ -1,5 +1,5 @@
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A22902	1
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.3+A23130	1
 SIIF 22		Identifier Character Sets	HEJEJN Nia	of 2
 *	*	*	*	*	*	*	*	*	+
 
@@ -35,16 +35,12 @@ for Document and Object Identifiers.
     The first character SHALL be of [A-Za-z] or [_] (UNDERSCORE).
     
     When printed, this set SHALL be printed in their original case.
-    When printed, You MAY prefix the identifier with [++] (PLUS PLUS)
-    to indicate the use of Set B.
-    
-    When printed as Code 39, lowercase characters 
-    SHALL be prefixed with [+] (PLUS, 42).
 
 
-<div style="line-break: page" />
+
+
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A22902	2
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.3+A23130	2
 SIIF 22		Identifier Character Sets	HEJEJN Nia	of 2
 *	*	*	*	*	*	*	*	*	+
 

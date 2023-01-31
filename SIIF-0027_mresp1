@@ -1,5 +1,5 @@
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.2+A23131	1
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.3+A23131	1
 SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
 *	*	*	*	*	*	*	*	*	+
 
@@ -20,6 +20,7 @@ are listed below.
     - [I] Integer
     - [N] Numbers (Floats)
     - [B] Booleans
+      - "T" for True, "F" for False, "N" for Null
   
   1b - Binary-safe
     - [U] Binary-safe String
@@ -32,7 +33,7 @@ are listed below.
 
 
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.2+A23131	2
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.3+A23131	2
 SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
 *	*	*	*	*	*	*	*	*	+
 

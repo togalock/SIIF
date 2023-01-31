@@ -1,5 +1,5 @@
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23131	1
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.2+A23131	1
 SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
 *	*	*	*	*	*	*	*	*	+
 
@@ -32,7 +32,7 @@ are listed below.
 
 
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23131	2
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.2+A23131	2
 SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
 *	*	*	*	*	*	*	*	*	+
 
@@ -76,6 +76,10 @@ SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2
       
       The size of a [D] Dictionary element shall be the number of
       key-value pairs that follows.
+      
+      The size of a [=] Base64 Encoded Binaries element shall be the
+      number of characters transmitted. If transmitting in chunks,
+      the chunk size shall be multiples of 4 for bit alignment.
       
       If the size is unknown, the "?" (63) can be used in place of
       the size parameter. After the data has been transmitted,

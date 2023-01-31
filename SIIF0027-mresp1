@@ -1,0 +1,84 @@
+*	*	*	*	*	*	*	*	*	+
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23131	1
+SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
+*	*	*	*	*	*	*	*	*	+
+
+"""
+This document suggests a serialization format for encoding
+data structures used during data transmission.
+
+This is a modified version of RESP - original available at
+[https://redis.io/docs/reference/protocol-spec/].
+"""
+
+1. Data Types encoded
+The following data types, with their prefix in square brackets [], 
+are listed below.
+
+  1a - Non-binary-safe
+    - [S] String
+    - [I] Integer
+    - [N] Numbers (Floats)
+    - [B] Booleans
+  
+  1b - Binary-safe
+    - [U] Binary-safe String
+    - [=] Base64 Encoded Binaries
+    - [L] Lists (Arrays)
+    - [D] Dictionaries (Maps)
+    - [X] Exception (Lists)
+
+
+
+
+*	*	*	*	*	*	*	*	*	+
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23131	2
+SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
+*	*	*	*	*	*	*	*	*	+
+
+2. Basic Format
+  All strings must be encoded in UTF-8.
+
+  2a - Non-binary-safe
+    All non-binary-safe data must not contain "\n" (10) or 
+    other control characters (0-31).
+    
+    For all non-binary-safe elements, each element is encoded as:
+    < Prefix >< Data >"\n"
+    
+    For example, an integer with the value -1 shall be encoded as:
+    I-1\n
+    
+    
+  2b - Binary-safe
+    For all binary-safe elements, each element is encoded as:
+    < Prefix >< Size >"\n"
+    < data >"\n"
+    
+    For example, a unicode string of 你好嗎 shall be encoded as:
+    U9\n
+    你好嗎\n
+    
+    and the list [1, 2] shall be encoded as:
+    L2\n
+    I1\n
+    I2\n
+    
+    
+    2bi - Size Parameter
+      The size parameter shall be encoded as a string.
+    
+      The size of a [U] Binary-safe String element shall be the
+      number of bytes encoded.
+    
+      The size of a [L] List element shall be the number of elements
+      that follows.
+      
+      The size of a [D] Dictionary element shall be the number of
+      key-value pairs that follows.
+      
+      If the size is unknown, the "?" (63) can be used in place of
+      the size parameter. After the data has been transmitted,
+      the stream shall be terminated with ".\n".
+      
+

@@ -1,5 +1,5 @@
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.4+A23131	1
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.5+A23131	1
 SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
 *	*	*	*	*	*	*	*	*	+
 
@@ -33,12 +33,15 @@ are listed below.
 
 
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.4+A23131	2
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.5+A23131	2
 SIIF 27		Modified RESP Serialization 1	HALNKM Alphor	of 2	
 *	*	*	*	*	*	*	*	*	+
 
 2. Basic Format
   All strings must be encoded in UTF-8.
+  
+  All whitespaces on header lines (containing prefix)
+  shall be disregarded.
 
   2a - Non-binary-safe
     All non-binary-safe data must not contain "\n" (10) or 

@@ -1,0 +1,87 @@
+*	*	*	*	*	*	*	*	*	+
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23201	1
+SIIF 28		Object Identifiers		HEJEJN Nia	of 2
+*	*	*	*	*	*	*	*	*	+
+
+"""
+This document denotes the structure of a universal object identifier,
+which may be used to identify records and objects.
+"""
+
+1. Character Sets
+  The identifier shall only be written in SIIF 22 Set A Characters,
+  consisting of [A-Z0-9-._].
+  
+  The identifier is NOT CASE-SENSITIVE and should be printed
+  in UPPERCASE letters.
+  
+  When printed as Code 39, the [ ] (SPACE, 38) character
+  SHALL be translated as [_] (UNDERSCORE) when read.
+  
+  
+2. Format
+  2.1 General Format
+    The general format of the identifier is as follows.
+
+    <ALN> "-" <ALN> <ALN> "-" <ALN> <ALN> <ALN> < Segments ...>
+
+    where <ALN> denotes the set [A-Z0-9._].
+    
+    The first segment, denotes the object type or nature,
+    the second segment denotes the object category or handling authority,
+    and the third segment denotes the object subcategory.
+    
+    Each "-" separated segment is a child of the previous segment,
+    or a node of lower level.
+    
+    A truncated format will be denoted in [Section 2.3].
+    
+    An example pair of valid identifiers is shown below.
+    L-EJ-ORG-ISM--S-SIIF28--001
+    LEJORGISM-S-SIIF28-001
+    
+
+
+*	*	*	*	*	*	*	*	*	+
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23201	2
+SIIF 28		Object Identifiers		HEJEJN Nia	of 2
+*	*	*	*	*	*	*	*	*	+
+
+  2.2 Segments
+    2.2.1 Generic Segment
+      A Generic Segment is composed of:
+      
+      "-" <ALN> <ALN> <ALN>
+    
+      For example, "-EJN".
+    
+      It is preferred for backwards compatability 
+      with old AIT Identifiers.
+    
+    
+    2.2.2 Extended Segment
+      An Extended Segment is composed of:
+      "--" < Type > "-" < Data > "-"
+      or
+      "--" < Segment Length L > < Generic Segments of Length L > "-"
+      
+      If an Extended Segment is followed by another Extended Segment,
+      or is the last Segment of the object identifier,
+      the ending "-" SHALL be omitted.
+      
+      Examples of valid extended segments are shown below.
+      --S-String-
+      --4-ABCD-EFGH-
+      --S-String--4-ABCD-EFGH-
+      --S-String--4-ABCD-EFGH
+      
+
+  2.3 Truncated Format
+    For space-efficiency, especially when printing in Code 39,
+    a truncated format may be used, provided that
+    all rules listed below are applied.
+      - Remove all "-" in the Starting Segment (2.1);
+      - Omit the starting "-" of a Generic Segment (2.2.1);
+      - Replace the starting "--" of an Extended Segment (2.2.2) with "-".
+  
+  

@@ -1,5 +1,5 @@
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23201	1
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.2+A23202	1
 SIIF 28		Object Identifiers		HEJEJN Nia	of 2
 *	*	*	*	*	*	*	*	*	+
 
@@ -43,7 +43,7 @@ which may be used to identify records and objects.
 
 
 *	*	*	*	*	*	*	*	*	+
-L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.1+A23201	2
+L-EJ-ORG-ISM	Inf Srv Mgmt Lab, Lab Origin	0.0.2+A23202	2
 SIIF 28		Object Identifiers		HEJEJN Nia	of 2
 *	*	*	*	*	*	*	*	*	+
 
@@ -79,9 +79,13 @@ SIIF 28		Object Identifiers		HEJEJN Nia	of 2
   2.3 Truncated Format
     For space-efficiency, especially when printing in Code 39,
     a truncated format may be used, provided that
-    all rules listed below are applied.
+    all rules listed below are applied at once.
       - Remove all "-" in the Starting Segment (2.1);
       - Omit the starting "-" of a Generic Segment (2.2.1);
       - Replace the starting "--" of an Extended Segment (2.2.2) with "-".
   
-  
+    Below lists a pair of complete and truncated identifiers.
+    
+    L-EJ-ORG-ISM--S-SIIF28--S-SIIF28--4-ABCD-EFGH--001-013
+    LEJORGISM-S-SIIF28-S-SIIF28-4-ABCDEFGH-001013
+    
